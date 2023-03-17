@@ -1,6 +1,9 @@
 import { useState } from "react"
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap//Button";
+import Form from "react-bootstrap//Form";
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
   const [showInput, setShowInput] = useState(false)
@@ -8,14 +11,14 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
 
     <Card>
       <div className="left">
-        <Card.Title className='card-title'
+        <Form.Text className='card-title'
           onClick={(e) => {
             setShowInput(!showInput)
           }}
         >
           {todo.text}
-        </Card.Title>
-        <input
+        </Form.Text>
+        <Form.Control
           style={{ display: showInput ? "block" : "none" }}
           type="text"
           onKeyDown={(e) => {
@@ -36,15 +39,15 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
           }}
         />
       </label>
-      <Button
-      className='btn btn-primary'
+      <button
+      className='button'
         checked={todo.completed}
         onClick={(e) => {
           deleteTodo(todo.id)
         }}
       >
         Delete Todo
-      </Button>
+      </button>
     </Card>
   )
 }

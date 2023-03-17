@@ -1,5 +1,5 @@
 import Todo from './Todo'
-import ModalCreate from './Modal'
+
 
 export default function TodoList({
     todos,
@@ -10,7 +10,7 @@ export default function TodoList({
   }) {
     return (
       <>
-      <ModalCreate />
+
       <div className='newtodo'>
         <h1>Create Todo</h1>
         <input
