@@ -1,17 +1,19 @@
 import { useState } from "react"
+import {Card, Button} from 'react-bootstrap';
 
 export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
   const [showInput, setShowInput] = useState(false)
   return (
-    <li>
+
+    <Card>
       <div className="left">
-        <h2
+        <Card.Title className='card-title'
           onClick={(e) => {
             setShowInput(!showInput)
           }}
         >
           {todo.text}
-        </h2>
+        </Card.Title>
         <input
           style={{ display: showInput ? "block" : "none" }}
           type="text"
@@ -26,7 +28,7 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
       <label className="middle">
         Complete
         <input
-          type="checkbox"
+          type="radio"
           checked={todo.completed}
           onChange={(e) => {
             completeTodo(todo.id, e)
@@ -34,6 +36,7 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
         />
       </label>
       <button
+      className='btn btn-primary'
         checked={todo.completed}
         onClick={(e) => {
           deleteTodo(todo.id)
@@ -41,6 +44,6 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
       >
         Delete Todo
       </button>
-    </li>
+    </Card>
   )
 }
