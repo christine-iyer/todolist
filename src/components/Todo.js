@@ -1,5 +1,6 @@
 import { useState } from "react"
-import {Card, Button} from 'react-bootstrap';
+import Card from 'react-bootstrap/Card';
+import Button from "react-bootstrap//Button";
 
 export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
   const [showInput, setShowInput] = useState(false)
@@ -35,7 +36,7 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
           }}
         />
       </label>
-      <button
+      <Button
       className='btn btn-primary'
         checked={todo.completed}
         onClick={(e) => {
@@ -43,7 +44,7 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
         }}
       >
         Delete Todo
-      </button>
+      </Button>
     </Card>
   )
 }
