@@ -2,6 +2,7 @@ import { useState } from "react"
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap//Button";
 import Form from "react-bootstrap//Form";
+import CloseButton from 'react-bootstrap/CloseButton';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 
@@ -30,24 +31,24 @@ export default function Todo({ todo, completeTodo, editTodoText, deleteTodo }) {
         />
       </div>
       <label className="middle">
-        Complete
-        <input
-          type="radio"
+        
+        <Form.Check
+          type="checkbox"
           checked={todo.completed}
           onChange={(e) => {
             completeTodo(todo.id, e)
           }}
         />
       </label>
-      <button
+      <CloseButton
       className='button'
         checked={todo.completed}
         onClick={(e) => {
           deleteTodo(todo.id)
         }}
       >
-        Delete Todo
-      </button>
+        
+      </CloseButton>
     </Card>
   )
 }

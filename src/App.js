@@ -1,7 +1,7 @@
 import './styles.css'
 import { useState, useEffect } from "react"
 import TodoList from "./components/TodoList"
-import Modal from './components/Modal'
+import TodoListModal from './components/TodoListModal'
 
 export default function App() {
     const [todos, setTodos] = useState([])
@@ -39,6 +39,7 @@ export default function App() {
 
   return (
     <div className="App">
+      
       <TodoList
      todos={todos}
         addTodo={addTodo}
@@ -46,6 +47,7 @@ export default function App() {
         editTodoText={editTodoText}
         deleteTodo={deleteTodo}
       />
+
     </div>
   )
 }
