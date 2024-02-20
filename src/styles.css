@@ -1,10 +1,19 @@
 :root {
+/* 
+
   --blue-1: #38afb5;
   --blue-2: #8bcfce;
   --blue-3: #c7e9e9;
   --grey: #a9b1b1;
   --orange: #ca8e3e;
-  --white: white;
+  --white: white; */
+  --blue-1: rgb(249,228,102);
+  --blue-2: rgb(175,204,102);
+  --blue-3: rgb(228,110,93);
+  --grey: rgb(129,228,224);
+  --orange: rgb(109,62,63);;
+  --white: rgb(239,228,221);
+  --beige: rgb(194,169,169);
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -24,7 +33,7 @@
 }
 
 body {
-  background-color: var(--grey);
+  background-color: var(--beige);
   margin: 0;
   padding: 0;
 }
@@ -43,7 +52,7 @@ body {
   text-align: center;
   background-color: white;
   width: 90vw;
-  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.425);
+  box-shadow: 0 4px 10px 0 rgba(194,169,169, 0.425);
   border-radius: 0.25rem;
   padding: 1rem;
   margin: 0 0 2rem;
@@ -66,7 +75,7 @@ body {
 
 .nowlist .neverlist>li {
   border: none;
-  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.7);
+  box-shadow: 4px 4px 8px rgba(194,169,169, 0.7);
   width: 100%;
   text-align: center;
   display: flex;
@@ -106,7 +115,7 @@ h1 {
 }
 
 .button {
-  background-color: var(--orange);
+  background-color: var(--blue-1);
   height: 1rem;
   width: 1rem;
   margin: 1%;
