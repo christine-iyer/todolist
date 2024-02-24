@@ -1,9 +1,6 @@
 import './styles.css'
 import { useState, useEffect } from "react"
 import TodoList from "./components/TodoList"
-import Table from "./components/Table"
-
-
 
 export default function App() {
     const [todos, setTodos] = useState([])
@@ -49,7 +46,7 @@ export default function App() {
         editTodoText={editTodoText}
         deleteTodo={deleteTodo}
       />
-      <Table />
+
 
     </div>
   )
