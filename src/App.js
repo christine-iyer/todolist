@@ -1,6 +1,7 @@
 import './styles.css'
 import { useState, useEffect } from "react"
 import TodoList from "./components/TodoList"
+import SortableList from './components/SortableList'
 
 export default function App() {
     const [todos, setTodos] = useState([])
@@ -46,7 +47,7 @@ export default function App() {
         editTodoText={editTodoText}
         deleteTodo={deleteTodo}
       />
-    
+    <SortableList />
 
     </div>
   )
