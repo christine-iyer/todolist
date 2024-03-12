@@ -1,7 +1,7 @@
 import { useState } from "react"
 import Card from 'react-bootstrap/Card';
 import Button from "react-bootstrap//Button";
-import Form from "react-bootstrap//Form";
+import Form from "react-bootstrap/Form";
 import CloseButton from 'react-bootstrap/CloseButton';
 import "bootstrap/dist/css/bootstrap.min.css";
 
