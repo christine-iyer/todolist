@@ -5,7 +5,16 @@ import TodoList from "./components/TodoList"
 
 
 export default function App() {
-    const [todos, setTodos] = useState([])
+    const [todos, setTodos] = useState([
+      {text: "Todos",
+    id: Date.now(),
+    completed: true,
+  },
+  {text: "ToDonts",
+  id: Date.now(),
+  completed: false,
+}
+    ])
 
     const addTodo = (e) => {
         const newTodo = { text: e.target.value, id: Date.now(), completed: false }
@@ -15,8 +24,8 @@ export default function App() {
 
 
 
-    // const wheresAntony = students.findIndex(student => student.name === 'Antony')
-    // students[wheresAntony].grade = 'A+++'
+    // const wheresCrystal = students.findIndex(student => student.name === 'Crystal')
+    // students[wheresCrystal].grade = 'A+++'
     const completeTodo = (id, e) => {
         const todosCopy = [...todos]
         const indexOfTodo = todosCopy.findIndex((i) => i.id === id )
